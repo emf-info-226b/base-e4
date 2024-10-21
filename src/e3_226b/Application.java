@@ -12,10 +12,10 @@ package e3_226b;
 // #                       |    |__  \__/  / \                          #
 // #                                                                    #
 // ######################################################################
-// # Projet de base pour l'évaluation E3 pour le module 226b.           #
-// # Application console à utiliser pour l'E3                           #
+// # Projet de base pour l'évaluation E4 pour le module 226b.           #
+// # Application console à utiliser pour l'E4                           #
 // ######################################################################
-// # Ecrit par # Mario Ramalho      # VERSION # 1.0 # DATE # 14.06.2024 #
+// # Ecrit par # Mario Ramalho      # VERSION # 1.0 # DATE # 21.10.2024 #
 // ######################################################################
 //
 /**
@@ -33,7 +33,7 @@ public class Application {
     public static void main(String[] args) {
         
         // MERCI DE DEPOSER VOS FICHERS DANS LE REPERTOIRE "files"
-        String fichier_nouveau = "./src/e3_226b/files/nouveau.txt";
+        String fichier_inscriptions = "./src/e3_226b/files/inscriptions.txt";
         
         // Affichage des resultats 
         System.out.println("----------------------------------");
@@ -41,6 +41,7 @@ public class Application {
         System.out.println("----------------------------------");
         
         // Votre code ici ....
+        
         
     }
     
