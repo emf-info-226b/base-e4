@@ -33,7 +33,7 @@ public class Application {
     public static void main(String[] args) {
         
         // MERCI DE DEPOSER VOS FICHERS DANS LE REPERTOIRE "files"
-        String fichier_inscriptions = "./src/e3_226b/files/inscriptions.txt";
+        String fichier_inscriptions = "./src/e4_226b/files/inscriptions.txt";
         
         // Affichage des resultats 
         System.out.println("----------------------------------");
