@@ -16,8 +16,8 @@ Le fichier d'inscription contient des informations sur plusieurs personnes. Chaq
 
 Exemple de ligne dans le fichier :
 ```
-Dupont, Jean, 1990-05-12, jean.dupont@example.com, 0791234567 
-Martin, Alice, 1985-11-23, alice.martin@example.com, 0789876543
+Dupont,Jean,1990-05-12,jean.dupont@example.com,0791234567 
+Martin,Alice,1985-11-23,alice.martin@example.com,0789876543
 ```
 
 ## Tâches à réaliser
@@ -27,23 +27,23 @@ Vous devez lire un fichier texte nommé `files/inscriptions.txt`, dans lequel se
 
 ### 2. Transformation des données
 Pour chaque personne, vous devrez transformer les données comme suit :
-- Transformer la date de naissance pour qu'elle soit au format `dd-MM-yyyy` au lieu de `yyyy-MM-dd`.
-- Vérifier que l'adresse email est valide (elle doit contenir un "@" et un domaine).
-- Ajouter une colonne "Âge" à la fin de chaque ligne, qui calcule l'âge de la personne à partir de sa date de naissance et de la date actuelle.
+- Transformer la date de naissance pour qu'elle soit au format `dd.MM.yyyy` au lieu de `yyyy-MM-dd`.
+- Vérifier que l'adresse email est valide (elle doit contenir un "@"), si l'e-mail n'est pas valide, la ligne ne sera pas importée.
+- Ajouter une colonne "Sigle" à la fin de chaque ligne, qui définit le sigle de la personne. Le format est le suivant : 3 premiers caractères du nom en majuscule, suivi de 2 premiers caractères du prénom en minuscule, suivi du l'année. Ex : Dupont Jean 1990 correspond à DUPje1990.
 
 ### 3. Écriture dans un nouveau fichier
-Vous devez ensuite écrire les données transformées dans un nouveau fichier texte nommé `files/exportation.txt`. Chaque ligne du fichier doit contenir les informations transformées de la personne, avec la nouvelle colonne "Âge" à la fin.
+Vous devez ensuite écrire les données transformées dans un nouveau fichier texte nommé `files/exportation.txt`. Chaque ligne du fichier doit contenir les informations transformées de la personne, avec les colonnes suivantes : Sigle, Nom, Prénom, Date de naissance, Email.
 
 Exemple de ligne dans le fichier modifié :
 ```
-Dupont, Jean, 12-05-1990, jean.dupont@example.com, 0791234567, 34 
-Martin, Alice, 23-11-1985, alice.martin@example.com, 0789876543, 38
+DUPje1990,Dupont,Jean,12.05.1990jean.dupont@example.com
+MARal1985,Martin,Alice,23.11.1985,alice.martin@example.com
 ```
 
 ## Contraintes techniques
 
 - Utilisez la classe `BufferedReader` pour lire le fichier et la classe `BufferedWriter` pour écrire le fichier.
-- Utilisez les API de gestion des dates en Java (`LocalDate`, `DateTimeFormatter`, etc.) pour manipuler les dates.
+- Un worker spécifique doit être présent pour permettre de lire et d'écrire des fichiers
 - Le fichier de sortie doit conserver le même format que le fichier d'entrée, avec les données transformées correctement.
 
 ## Critères d'évaluation
