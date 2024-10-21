@@ -22,7 +22,7 @@ Martin,Alice,1985-11-23,alice.martin@example.com,0789876543
 
 ## Tâches à réaliser
 
-### 1. Lecture du fichier
+### 1. Lecture du fichier texte
 Vous devez lire un fichier texte nommé `files/inscriptions.txt`, dans lequel se trouvent les données d'inscription. Chaque ligne du fichier contient une personne, avec les informations séparées par des virgules.
 
 ### 2. Transformation des données
@@ -31,7 +31,7 @@ Pour chaque personne, vous devrez transformer les données comme suit :
 - Vérifier que l'adresse email est valide (elle doit contenir un "@"), si l'e-mail n'est pas valide, la ligne ne sera pas importée.
 - Ajouter une colonne "Sigle" à la fin de chaque ligne, qui définit le sigle de la personne. Le format est le suivant : 3 premiers caractères du nom en majuscule, suivi de 2 premiers caractères du prénom en minuscule, suivi du l'année. Ex : Dupont Jean 1990 correspond à DUPje1990.
 
-### 3. Écriture dans un nouveau fichier
+### 3. Écriture dans un nouveau fichier texte
 Vous devez ensuite écrire les données transformées dans un nouveau fichier texte nommé `files/exportation.txt`. Chaque ligne du fichier doit contenir les informations transformées de la personne, avec les colonnes suivantes : Sigle, Nom, Prénom, Date de naissance, Email.
 
 Exemple de ligne dans le fichier modifié :
@@ -39,6 +39,10 @@ Exemple de ligne dans le fichier modifié :
 DUPje1990,Dupont,Jean,12.05.1990jean.dupont@example.com
 MARal1985,Martin,Alice,23.11.1985,alice.martin@example.com
 ```
+
+### 4. Écriture dans un nouveau fichier binaire
+Vous devez ensuite écrire les données dans un nouveau fichier binaire nommé `files/inscriptions.ser`. Toutes les données doivent être stockées dans ce fichier binaire.
+Au redémarrage de l'application, si le fichier `files/inscriptions.ser` est existant, le programme affiche dans la console le contenu de ce fichier.
 
 ## Contraintes techniques
 
